@@ -9,9 +9,6 @@
     if($title == ""){
         echo "제목은 비우실 수 없습니다.";
         exit;
-    }else if($author == ""){
-        echo "작성자는 비우실 수 없습니다.";
-        exit;
     }else if($content == ""){
         echo "내용은 비우실 수 없습니다.";
         exit;
