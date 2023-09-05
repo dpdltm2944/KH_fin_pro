@@ -19,8 +19,8 @@
 
     
     $sql = "insert into qna set
-            title='$title',
-            author='$author',
+            subject='$title',
+            user_id='$author',
             content='$content'";
     $return = sql_con($sql);
     if($return){
