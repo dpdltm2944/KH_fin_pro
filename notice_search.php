@@ -4,7 +4,6 @@
     require "sql_connect.php";
     $sql_str = "select * from notice where subject like '%$keyword%'";
     $return = sql_con($sql_str);
-    $result = mysqli_fetch_array($return);
 
 ?>
 
@@ -36,6 +35,7 @@
                 ?>
             </ul>
         </nav>
+    </header>
 
         
         검색어 : <?php echo $keyword. "\n"; ?> <br>
@@ -44,11 +44,11 @@
         while($result = mysqli_fetch_array($return))
          {
          ?>
-              <a href ="notice_view.php?no=<?php echo $result['no']; ?>"> 
-              번호 : <?php echo $result['no']; ?>  
-               제목 :<?php echo $result['subject']; ?> 
-              작성자 : <?php echo $result['user_id']; ?> </a><br>
-              <?php
+            <a href ="notice_view.php?no=<?php echo $result['no']; ?>"> 
+            번호 : <?php echo $result['no']; ?>  
+            제목 :<?php echo $result['subject']; ?> 
+            작성자 : <?php echo $result['user_id']; ?> </a><br>
+            <?php
          }
          ?>
          
