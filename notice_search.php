@@ -10,11 +10,25 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>검색 결과</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
     <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">메인</a></li>
+                <li><a href="/evaluation.html">합격자 발표</a></li>
+                <li><a href="/notice.php">공지사항</a></li>
+                <li><a href="/qna.php">문의하기</a></li>
+                <li><a href="/profile.html">마이페이지</a></li>
+                <li><a href="/login.html">로그인</a></li>
+            </ul>
+        </nav>
 
         <pre>
         검색어 : <?php echo $keyword. "\n"; ?> <br>
