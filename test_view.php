@@ -53,8 +53,8 @@
             <?php echo $result['test_name']; ?>  <br>
             <?php echo $result['test_date']; ?> <br>
             <?php echo $result['test_place']; ?> 
-            <?php echo $result['test_time']'분'; ?> 
-            <?php echo $result['test_price']'원'; ?> 
+            <?php echo $result['test_time']+"분"; ?> 
+            <?php echo $result['test_price']+"원"; ?> 
             </p> 
             
         <!-- 매칭 결과를 표시하는 내용을 추가하세요 -->
