@@ -49,8 +49,8 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<li>
-                            <strong>' . $row['제목컬럼'] . ':</strong> ' . $row['작성자컬럼'] . ', ' . $row['게시글날짜컬럼'] . '
-                            <p>' . $row['내용컬럼'] . '</p>
+                            <strong>' . $row['subject'] . ':</strong> ' . $row['user_id'] . '
+                            <p>' . $row['content'] . '</p>
                           </li>';
                 }
             } else {
