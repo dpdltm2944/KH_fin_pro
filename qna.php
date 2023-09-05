@@ -13,7 +13,7 @@
                 <li><a href="/">메인</a></li>
                 <li><a href="/evaluation.html">합격자 발표</a></li>
                 <li><a href="/notice.php">공지사항</a></li>
-                <li><a href="/qna.html">문의하기</a></li>
+                <li><a href="/qna.php">문의하기</a></li>
                 <li><a href="/profile.html">마이페이지</a></li>
                 <li><a href="/login.html">로그인</a></li>
             </ul>
@@ -21,7 +21,7 @@
     </header>
     <div class="section">
         <h2>게시글 작성</h2>
-        <form>
+        <form method="post" action="qna_add.php">
             <label for="title">제목:</label>
             <input type="text" id="title" name="title" required>
 
