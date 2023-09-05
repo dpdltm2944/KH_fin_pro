@@ -48,16 +48,21 @@
             <input type="reset" value="취소">
         </form>
     </div>
+   
+    
+</body>
+<body>
     <div class="section">
         <h2>문의 사항 리스트</h2>
-        <ul>
-        <?php
+        <ul id="question-list">
+            <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<li>
-                            <strong>' . $row['subject'] . '</strong> 
-                            <p>' . $row['user_id'] . '</p>
-                            <p>' . $row['content'] . '</p>
+                            <span class="question-title" onclick="toggleContent(this)">' . $row['제목컬럼'] . '</span>
+                            <div class="question-content">' . $row['내용컬럼'] . '</div>
+                            <button class="delete-button" onclick="deleteQuestion(this)">삭제</button>
+                            <button class="reply-button" onclick="replyToQuestion(this)">답변</button>
                           </li>';
                 }
             } else {
@@ -66,6 +71,23 @@
             ?>
         </ul>
     </div>
+
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+
+        function deleteQuestion(button) {
+            const listItem = button.parentElement;
+            listItem.remove();
+        }
+
+        function replyToQuestion(button) {
+            // 여기에서 관리자 계정 확인 로직을 추가하고, 관리자 계정인 경우에만 답변 창을 표시
+            alert("관리자만 답변할 수 있습니다.");
+        }
+    </script>
     <footer>
         © 2023 게시판. 모든 권리 보유.
     </footer>
