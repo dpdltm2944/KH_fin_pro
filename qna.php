@@ -39,7 +39,6 @@
         <form method="post" action="qna_add.php">
             <label for="title">제목:</label>
             <input type="text" id="title" name="title" required>
-                <!--작성자는 session에서 가져오기-->
             <label for="user_id">작성자:<?php echo $user_id; ?></label>            
             <label for="content">문의내용:</label>
             <textarea id="content" name="content" rows="5" required></textarea>
@@ -53,42 +52,20 @@
 </body>
 <body>
     <div class="section">
-        <h2>문의 사항 리스트</h2>
-        <ul id="question-list">
+        <h2>목록</h2>
+        <ul>
             <?php
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<li>
-                            <span class="question-title" onclick="toggleContent(this)">' . $row['subject'] . '</span>
-                            <div class="question-content">' . $row['content'] . '</div>
-                            <div class="question-name">' . $row['user_id'] . '</div>
-                            <button class="delete-button" onclick="deleteQuestion(this)">삭제</button>
-                            <button class="reply-button" onclick="replyToQuestion(this)">답변</button>
-                          </li>';
+            if ($result) {
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<li><a href=\"qna_view.php?no={$row['no']}\">{$row['subject']}</a></li>";
                 }
-            } else {
-                echo '<li>등록된 게시글이 없습니다.</li>';
+            }else{
+                echo "게시글이 없습니다.";
             }
             ?>
         </ul>
     </div>
 
-    <script>
-        function toggleContent(element) {
-            const content = element.nextElementSibling;
-            content.style.display = content.style.display === "none" ? "block" : "none";
-        }
-
-        function deleteQuestion(button) {
-            
-            const listItem = button.parentElement;
-            listItem.remove();
-        }
-
-        function replyToQuestion(button) {
-            const listItem = button.parentElement;
-        }
-    </script>
     <footer>
         © 2023 게시판. 모든 권리 보유.
     </footer>

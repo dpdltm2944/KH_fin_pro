@@ -4,7 +4,10 @@
     $title = $_POST['title'];
     $author = $_SESSION['loginID'];
     $content = $_POST['content'];
-
+    if($author == ""){
+        echo "로그인 후 이용해주세요.";
+        exit;
+    }
     // client 입력 값 검증
     if($title == ""){
         echo "제목은 비우실 수 없습니다.";
