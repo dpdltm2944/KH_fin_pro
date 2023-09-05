@@ -1,7 +1,7 @@
 <?php
-    include "sql_connect.php";
-    $sql = "select * from qna order by no desc";
-    $result = sql_con($sql);
+    require "sql_connect.php";
+    $sql_str = "select * from qna order by no desc";
+    $result = sql_con($sql_str);
 ?>
 
 

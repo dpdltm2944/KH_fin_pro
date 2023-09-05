@@ -30,7 +30,7 @@
     }
 
     
-    $sql = "insert into user set
+    $sql_str = "insert into user set
             id='$id',
             password='$pass',
             name='$name',
@@ -42,7 +42,7 @@
             address='$address',
             academic='$academic'
             ";
-    $return = sql_con($sql);
+    $return = sql_con($sql_str);
     if($return){
         echo "<script>";
         echo "alert('회원가입 성공!')";

@@ -18,11 +18,11 @@
     }
 
     
-    $sql = "insert into qna set
+    $sql_str = "insert into qna set
             subject='$title',
             user_id='$author',
             content='$content'";
-    $return = sql_con($sql);
+    $return = sql_con($sql_str);
     if($return){
         echo "글 등록 성공";
     }

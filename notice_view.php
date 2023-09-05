@@ -2,9 +2,9 @@
 
     $no = $_GET['no'];
    
-    require "sql_connect.php"
-    $sql = "select * from notice where no=$no";
-    $return = sql_con($sql);
+    require "sql_connect.php";
+    $sql_str = "select * from notice where no=$no";
+    $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
 
 
@@ -13,13 +13,16 @@
 <!DOCTYPE html>
 <html>
     <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title><?php echo $result['subject']; ?> </title>
     </head>
 
     <body>
     <header>
         <nav>
-        <ul>
+            <ul>
                 <li><a href="/">메인</a></li>
                 <li><a href="/evaluation.php">합격자 발표</a></li>
                 <li><a href="/notice.php">공지사항</a></li>
@@ -35,10 +38,11 @@
                 ?>
             </ul>
         </nav>
+    </header>
 
         
-            제목 : <?php echo $result['title']."\n"; ?> 
-            내용 : <?php echo $result['content']."\n"; ?> 
+            제목 : <?php echo $result['subject']."\n"; ?> <br>
+            내용 : <?php echo $result['content']."\n"; ?> <br>
             작성자 : <?php echo $result['user_id']."\n"; ?> 
     </body>
 </html>
