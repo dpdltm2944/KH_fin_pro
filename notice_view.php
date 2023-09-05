@@ -13,6 +13,9 @@
 <!DOCTYPE html>
 <html>
     <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title><?php echo $result['subject']; ?> </title>
     </head>
 
@@ -37,7 +40,7 @@
         </nav>
 
         
-            제목 : <?php echo $result['title']."\n"; ?> 
+            제목 : <?php echo $result['subject']."\n"; ?> 
             내용 : <?php echo $result['content']."\n"; ?> 
             작성자 : <?php echo $result['user_id']."\n"; ?> 
     </body>
