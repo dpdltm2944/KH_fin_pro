@@ -44,10 +44,14 @@
             ";
     $return = sql_con($sql);
     if($return){
-        echo "회원가입 성공";
+        echo "<script>";
+        echo "alert('회원가입 성공!')";
+        echo "</script>";
     }
     else {
-        echo "회원가입 실패";
+        echo "<script>";
+        echo "alert('회원가입 실패')";
+        echo "</script>";
     }    
-
+    echo "location.href='/login.html';</script>";
 ?>
