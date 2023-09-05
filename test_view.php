@@ -56,10 +56,10 @@
             응시시간 <?php echo $result['test_time']; ?> 분 <br>
             응시가격 <?php echo $result['test_price']; ?> 원 <br>
             </p> 
-            
+            <a href="/test_proc.php?test_no=<?php echo $result['test_no']?>" class="button"><button>응시하기</button></a>
         <!-- 매칭 결과를 표시하는 내용을 추가하세요 -->
     </section>
-
+    
     <footer>
         <p>&copy; 2023 Site Name</p>
     </footer>

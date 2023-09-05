@@ -1,11 +1,13 @@
 <?php
     require "sql_connect.php";
+    session_start();
     //파라미터 저장
-    $id=$_POST['id'];
-    $pass=$_POST['password'];
-
+    $no=$_GET['test_no'];
+    $user_no = $_SESSION['user_no'];
+    $order_id = date('YmHis')+$no+$user_no;
     //DB쿼리
-    $sql_str = "select * from user where id = '$id' and password = '$pass';";
+    
+    $sql_str = "insert into test_order set test_no='$no', user_no=$user_no, order_id =$order_id";
 
     //쿼리 결과
     $return = sql_con($sql_str);
@@ -16,7 +18,6 @@
         session_start();
         $_SESSION['loginID'] = $id;
         $_SESSION['type'] = $result['type'];
-        $_SESSION['user_no'] = $result['no'];
     }else{
         echo "로그인 실패(fail)";
     }
