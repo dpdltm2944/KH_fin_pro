@@ -49,7 +49,7 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<li>
-                            <strong>' . $row['subject'] . ':</strong> 
+                            <strong>' . $row['subject'] . '</strong> 
                             <p>' . $row['user_id'] . '</p>
                             <p>' . $row['content'] . '</p>
                           </li>';
