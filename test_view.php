@@ -46,7 +46,7 @@
             $no = $_GET['test_no'];
             $sql_str = ("select * from test where test_no=$no");
             $return = sql_con($sql_str);
-            $result = mysqli_fetch_array($return)
+            $result = mysqli_fetch_array($return);
             echo "<h2>"$result['test_name']"</h2>";
         ?>
            <p> 번호 : <?php echo $result['test_no']; ?><br>
