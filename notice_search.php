@@ -4,7 +4,7 @@
     require "sql_connect.php"
     $sql = "select * from notice where subject like '%$keyword%'";
     $return = sql_con($sql);
-    $result = mysql_fetch_array($return);
+    $result = mysqli_fetch_array($return);
 
 ?>
 
@@ -20,7 +20,7 @@
         검색어 : <?php echo $keyword. "\n"; ?> <br>
 
         <?php
-        while($result = mysql_fetch_array($return))
+        while($result = mysqli_fetch_array($return))
          {
          ?>
               <a href ="notice_view.php?no=<?php echo $result['no']; ?>"> 

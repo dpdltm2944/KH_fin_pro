@@ -3,10 +3,10 @@
     $content = $_POST['content'];
   
     require "sql_connect.php"
-    $sql = "insert into notice set subject='$subject', content='$content', user_id='$user_id';
+    $sql = "insert into notice set subject='$subject', content='$content', user_id='$user_id'";
     $return = sql_con($sql);
-    $result = mysql_fetch_array($return);
-    if($_SESSION['user_id'] == ""){
+    $result = mysqli_fetch_array($return);
+    if($_SESSION['loginID'] == ""){
         $user = "not login";
     } else {
         $user = $_SESSION['loginID'];
