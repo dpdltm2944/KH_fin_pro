@@ -1,8 +1,8 @@
 <?php
     require "sql_connect.php";
-
+    $
     $title = $_POST['title'];
-    $author = $_POST['author'];
+    $author = $_SESSION['loginID'];
     $content = $_POST['content'];
 
     // client 입력 값 검증
