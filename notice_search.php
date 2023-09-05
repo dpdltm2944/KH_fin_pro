@@ -30,7 +30,7 @@
             </ul>
         </nav>
 
-        <pre>
+        
         검색어 : <?php echo $keyword. "\n"; ?> <br>
 
         <?php
@@ -44,6 +44,6 @@
               <?php
          }
          ?>
-         </pre>
+         
     </body>
 </html>

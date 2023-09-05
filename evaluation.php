@@ -20,7 +20,6 @@
     </head>
 
     <body>
-        <pre>
             결과 : <?php echo $result['result']."\n"; ?> 
     </body>
 </html>

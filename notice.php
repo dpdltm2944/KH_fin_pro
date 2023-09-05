@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </header>
-    <pre>
+    
         <!-- 게시물 작성 폼 (관리자만 접근 가능) -->
        <?php
             session_start();
@@ -52,7 +52,6 @@
                 <?php    
             }     
             ?>
-    </pre>
 </body>
 </html>
 

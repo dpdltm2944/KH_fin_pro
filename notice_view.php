@@ -28,8 +28,8 @@
                 <li><a href="/login.html">로그인</a></li>
             </ul>
         </nav>
+
         
-        <pre>
             제목 : <?php echo $result['title']."\n"; ?> 
             내용 : <?php echo $result['content']."\n"; ?> 
             작성자 : <?php echo $result['user_id']."\n"; ?> 
