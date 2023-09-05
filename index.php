@@ -46,7 +46,7 @@
                 echo $result['test_time'] +"분";
                 echo $result['test_price'] +"원";
                 echo $result['test_place'];
-                <br>
+                echo "<br>";
             }
             echo "</section>";
           }  
