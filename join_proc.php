@@ -32,7 +32,7 @@
     
     $sql = "insert into user set
             id='$id',
-            pass='$pass',
+            password='$pass',
             name='$name',
             phone='$phone',
             email='$email',
