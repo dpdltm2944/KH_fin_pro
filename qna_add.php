@@ -8,10 +8,10 @@
     if (empty($author)) {
         echo "로그인 후 이용해주세요.";
         exit;
-    } elseif (empty($title)) {
+    } elseif (empty(trim($title))) {
         echo "제목은 비우실 수 없습니다.";
         exit;
-    } elseif (empty($content)) {
+    } elseif (empty(trim($content))) {
         echo "내용은 비우실 수 없습니다.";
         exit;
     }
