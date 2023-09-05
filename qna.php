@@ -26,6 +26,20 @@
             <input type="reset" value="취소">
         </form>
     </div>
+    <div class="section">
+        <h2>문의 사항 리스트</h2>
+        <ul>
+            <li>
+                <strong>문의 제목 1:</strong> 작성자 1, 날짜 1
+                <p>문의 내용 1</p>
+            </li>
+            <li>
+                <strong>문의 제목 2:</strong> 작성자 2, 날짜 2
+                <p>문의 내용 2</p>
+            </li>
+            <!-- 여기에 추가 문의 사항 리스트 항목 추가 -->
+        </ul>
+    </div>
     <footer>
         © 2023 게시판. 모든 권리 보유.
     </footer>
