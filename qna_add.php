@@ -1,6 +1,6 @@
 <?php
     require "sql_connect.php";
-    $
+    session_start();
     $title = $_POST['title'];
     $author = $_SESSION['loginID'];
     $content = $_POST['content'];
