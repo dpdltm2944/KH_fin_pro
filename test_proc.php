@@ -11,17 +11,12 @@
 
     //쿼리 결과
     $return = sql_con($sql_str);
-    $result = mysqli_fetch_array($return);
 
-    if($result){
-        echo "로그인 성공(success)";
-        session_start();
-        $_SESSION['loginID'] = $id;
-        $_SESSION['type'] = $result['type'];
+    if($return){
+        echo "<script>alert('정상적으로 접수되었습니다.');</script>";
     }else{
-        echo "로그인 실패(fail)";
+        echo "<script>alert('접수오류 재시도해주세요..'); </script>";
     }
-
+    echo "<script>location.href='/';</script>"
+    
 ?>
-
-<a href="/">메인페이지</a>
