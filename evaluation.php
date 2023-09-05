@@ -5,7 +5,7 @@
     require "sql_connect.php"
     $sql = "select * from test_result where user_no=$user_no && user_name=$user_name ";
     $return = sql_con($sql);
-    $result = mysql_fetch_array($return);
+    $result = mysqli_fetch_array($return);
 ?>
 
 

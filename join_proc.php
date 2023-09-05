@@ -1,4 +1,6 @@
 <?php
+    require "sql_connect.php";
+
     $id = $_POST['id'];
     $pass = $_POST['pass'];
     $name = $_POST['name'];
@@ -21,12 +23,7 @@
         exit;
     }
 
-    $connect = mysql_connect("localhost", "root", "P@ssw0rd");
-    if(!$connect){
-        echo "MySql Server Connect Fail!";
-        exit;
-    }
-    mysql_select_db("webhacktest");
+    
     $sql = "insert into memeber set
             id='$id',
             pass='$pass',
@@ -35,7 +32,7 @@
             phone='$phone',
             academic='$academic'
             ";
-    $return = mysql_query($sql);
+    $return = sql_con($sql);
     if($return){
         echo "회원가입 성공";
     }
@@ -43,5 +40,4 @@
         echo "회원가입 실패";
     }    
 
-    mysql_close();
 ?>

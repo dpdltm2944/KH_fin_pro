@@ -5,7 +5,7 @@
 
     $sql = "select user_id from notice where no=$no";
     $return = sql_con($sql);
-    $result = mysql_fetch_array($return);
+    $result = mysqli_fetch_array($return);
 
     session_start();
     if($_SESSION['loginID'] == $result['user'] || $_SESSION['loginID'] == "admin"){
