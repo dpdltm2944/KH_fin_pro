@@ -80,13 +80,51 @@
         }
 
         function deleteQuestion(button) {
+            if($user_id != "admin" || $user_id != $row['user_id'] ){
+                alert("관리자 혹은 본인만 삭제할 수 있습니다.");
+                return;
+            }
             const listItem = button.parentElement;
             listItem.remove();
         }
 
         function replyToQuestion(button) {
-            // 여기에서 관리자 계정 확인 로직을 추가하고, 관리자 계정인 경우에만 답변 창을 표시
+            if($user_id != "admin"){
             alert("관리자만 답변할 수 있습니다.");
+            return;
+            }
+            const listItem = button.parentElement;
+            const questionTitle = listItem.querySelector(".question-title").innerText;
+            const questionContent = listItem.querySelector(".question-content").innerText;
+            const questionName = listItem.querySelector(".question-name").innerText;
+            const reply = prompt("답변을 입력하세요.");
+            if (reply === null) {
+                return;
+            }
+            const replyElement = document.createElement("div");
+            replyElement.classList.add("question-reply");
+            replyElement.innerText = reply;
+            listItem.appendChild(replyElement);
+
+            const replyButton = listItem.querySelector(".reply-button");
+            replyButton.remove();
+
+            const deleteButton = document.createElement("button");
+            deleteButton.classList.add("delete-button");
+            deleteButton.innerText = "삭제";
+            deleteButton.onclick = function() {
+                deleteQuestion(this);
+            };
+            listItem.appendChild(deleteButton);
+
+            const questionTitleElement = listItem.querySelector(".question-title");
+            questionTitleElement.innerText = questionTitle + " [답변 완료]";
+
+            const questionContentElement = listItem.querySelector(".question-content");
+            questionContentElement.innerText = questionContent;
+
+            const questionNameElement = listItem.querySelector(".question-name");
+            questionNameElement.innerText = questionName;
         }
     </script>
     <footer>
