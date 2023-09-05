@@ -53,5 +53,5 @@
         echo "alert('회원가입 실패')";
         echo "</script>";
     }    
-    echo "<script>location.href='/login.html';</script>";
+    echo "<script>location.href='/login.php';</script>";
 ?>

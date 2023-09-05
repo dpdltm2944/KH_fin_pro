@@ -38,7 +38,7 @@
             <input type="submit" name="login" value="로그인">
         </form>
 
-        <a href="join.html" class="button"><button>회원가입</button></a>
+        <a href="join.php" class="button"><button>회원가입</button></a>
     </div>
 </body>
 </html>
