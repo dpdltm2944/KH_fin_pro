@@ -30,7 +30,6 @@
     
         <!-- 게시물 작성 폼 (관리자만 접근 가능) -->
        <?php
-            session_start();
             if ($_SESSION['type'] =='admin') {
             echo "<form method=\"post\" action=\"notice_insert.php\">";
                 echo" 제목 : <input type=\"text\" name=\"subject\">";
