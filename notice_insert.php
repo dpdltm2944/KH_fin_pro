@@ -12,9 +12,8 @@
   
     $sql_str = "insert into notice set subject='$subject', content='$content', user_id='$user'";
     $return = sql_con($sql_str);
-    $result = mysqli_fetch_array($return);
     
-    if($result){
+    if($return){
         echo "글 등록 성공";
     }else {
         echo "글 등록 실패";
