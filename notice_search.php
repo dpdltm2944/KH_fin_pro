@@ -1,9 +1,9 @@
 <?php
     $keyword = $_GET['keyword'];
 
-    require "sql_connect.php"
-    $sql = "select * from notice where subject like '%$keyword%'";
-    $return = sql_con($sql);
+    require "sql_connect.php";
+    $sql_str = "select * from notice where subject like '%$keyword%'";
+    $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
 
 ?>

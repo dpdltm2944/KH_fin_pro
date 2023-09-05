@@ -1,10 +1,10 @@
 <?php
     $no = $_GET['no'];
 
-    require "sql_connect.php"
+    require "sql_connect.php";
 
-    $sql = "select user_id from notice where no=$no";
-    $return = sql_con($sql);
+    $sql_str = "select user_id from notice where no=$no";
+    $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
 
     session_start();

@@ -42,8 +42,8 @@
         
                 require "sql_connect.php";
         
-                $sql = "SELECT name , age , sex , address FROM user WHERE id='$id'";
-                $return = sql_con($sql);
+                $sql_str = "SELECT name , age , sex , address FROM user WHERE id='$id'";
+                $return = sql_con($sql_str);
             }
 
             while ($result = mysql_fetch_array($return)) 

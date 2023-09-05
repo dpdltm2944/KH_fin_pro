@@ -5,10 +5,10 @@
     $pass=$_POST['password'];
 
     //DB쿼리
-    $sql = "select * from user where id = '$id' and password = '$pass';";
+    $sql_str = "select * from user where id = '$id' and password = '$pass';";
 
     //쿼리 결과
-    $return = sql_con($sql);
+    $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
 
     if($result){
