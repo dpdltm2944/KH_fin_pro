@@ -29,29 +29,34 @@
 
     <?php
           
-          if($_SESSION['loginID'] != ""){
-            // 로그인 시 프로필 //
-            echo "<section class=\"section profile\">";
-            echo "<h1>나의 프로필</h1>";
-            echo "</section>";
+          if($_SESSION['loginID'] == ""){
+            // 비로그인 시 사용 불가//
+            echo "<script>";
+			echo "alert('회원가입 후 이용해주세요');";
+            echo "location.href='/';";
+			echo "</script>";
           }  
     ?>
     
 
     <section class="section schedule">
-        <h2>시험 일정</h2>
+        
         <?php
             require "sql_connect.php";
-
-            $sql_str = ("select * from test where date(now()) <= date(test_date) order by test_date");
+            $no = $_GET['test_no'];
+            $sql_str = ("select * from test where test_no=$no");
             $return = sql_con($sql_str);
-            while ($result = mysqli_fetch_array($return))
-            {
-                ?>
-                <a href="/test_view.php?test_no=<?php $result['test_no']?>번호 : <?php echo $result['test_no']; ?>  <?php echo $result['test_name']; ?>  <?php echo $result['test_date']; ?> <?php echo $result['test_place']; ?></a> <br>
-                <?php    
-            }     
-            ?>
+            $result = mysqli_fetch_array($return)
+            echo "<h2>"$result['test_name']"</h2>";
+        ?>
+           <p> 번호 : <?php echo $result['test_no']; ?><br>
+            <?php echo $result['test_name']; ?>  <br>
+            <?php echo $result['test_date']; ?> <br>
+            <?php echo $result['test_place']; ?> 
+            <?php echo $result['test_time']'분'; ?> 
+            <?php echo $result['test_price']'원'; ?> 
+            </p> 
+            
         <!-- 매칭 결과를 표시하는 내용을 추가하세요 -->
     </section>
 
