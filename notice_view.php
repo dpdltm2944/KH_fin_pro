@@ -22,7 +22,7 @@
     <body>
     <header>
         <nav>
-        <ul>
+            <ul>
                 <li><a href="/">메인</a></li>
                 <li><a href="/evaluation.php">합격자 발표</a></li>
                 <li><a href="/notice.php">공지사항</a></li>
@@ -38,6 +38,7 @@
                 ?>
             </ul>
         </nav>
+    </header>
 
         
             제목 : <?php echo $result['subject']."\n"; ?> 
