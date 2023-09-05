@@ -6,14 +6,29 @@
     $content = $_POST['content'];
     
     if (empty($author)) {
-        echo "로그인 후 이용해주세요.";
-        exit;
+        //경고창 띄우기
+        echo
+            "<script>
+            alert('로그인 후 이용하세요.');
+            </script>";
+        //이전 페이지로 이동
+        echo "<script>history.back();</script>";
     } elseif (empty(trim($title))) {
-        echo "제목은 비우실 수 없습니다.";
-        exit;
+        //경고창 띄우기
+        echo
+            "<script>
+            alert('제목은 비우실 수 없습니다.');
+            </script>";
+        //이전 페이지로 이동
+        echo "<script>history.back();</script>";
     } elseif (empty(trim($content))) {
-        echo "내용은 비우실 수 없습니다.";
-        exit;
+        //경고창 띄우기
+        echo
+            "<script>
+            alert('내용은 비우실 수 없습니다.');
+            </script>";
+        //이전 페이지로 이동
+        echo "<script>history.back();</script>";
     }
 
     
