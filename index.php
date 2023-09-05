@@ -30,9 +30,24 @@
     <?php
           
           if($_SESSION['loginID'] != ""){
-            // 로그인 시 프로필 //
+            // 로그인 시 나의 접수현황 //
+            require "sql_connect.php";
+            $user_no = $_SESSION['user_no'];
+            /// join 하여 데이터 출력 해야됨///
+            $sql_str = ("select * from test_order join test on test_order.test_no = test.test_no where test_order.user_no = $user_no");
+            $return = sql_con($sql_str);
             echo "<section class=\"section profile\">";
-            echo "<h1>나의 프로필</h1>";
+            echo "<h1>나의 접수현황</h1>";
+            
+            while ($result = mysqli_fetch_array($return))
+            {
+                echo $result['test_name'];
+                echo $result['test_date'];
+                echo $result['test_time'] +"분";
+                echo $result['test_price'] +"원";
+                echo $result['test_place'];
+                <br>
+            }
             echo "</section>";
           }  
     ?>
@@ -41,8 +56,6 @@
     <section class="section schedule">
         <h2>시험 일정</h2>
         <?php
-            require "sql_connect.php";
-
             $sql_str = ("select * from test where date(now()) <= date(test_date) order by test_date");
             $return = sql_con($sql_str);
             while ($result = mysqli_fetch_array($return))
