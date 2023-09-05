@@ -1,3 +1,10 @@
+<?php
+    include "sql_connect.php";
+    &sql = "select * from qna order by no desc";
+    $result = sql_con($sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -38,15 +45,18 @@
     <div class="section">
         <h2>문의 사항 리스트</h2>
         <ul>
-            <li>
-                <strong>문의 제목 1:</strong> 작성자 1, 날짜 1
-                <p>문의 내용 1</p>
-            </li>
-            <li>
-                <strong>문의 제목 2:</strong> 작성자 2, 날짜 2
-                <p>문의 내용 2</p>
-            </li>
-            <!-- 여기에 추가 문의 사항 리스트 항목 추가 -->
+        <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<li>
+                            <strong>' . $row['제목컬럼'] . ':</strong> ' . $row['작성자컬럼'] . ', ' . $row['게시글날짜컬럼'] . '
+                            <p>' . $row['내용컬럼'] . '</p>
+                          </li>';
+                }
+            } else {
+                echo '<li>등록된 게시글이 없습니다.</li>';
+            }
+            ?>
         </ul>
     </div>
     <footer>
