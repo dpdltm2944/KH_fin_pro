@@ -7,7 +7,7 @@
     $order_id = date('YmHis')+$no+$user_no;
     //DB쿼리
     
-    $sql_str = "insert into test_order set test_no='$no', user_no=$user_no, order_id =$order_id";
+    $sql_str = "insert into test_order set test_no='$no', user_no='$user_no', order_id='$order_id'";
 
     //쿼리 결과
     $return = sql_con($sql_str);
