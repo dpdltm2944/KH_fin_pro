@@ -40,6 +40,18 @@
 
     <section class="section schedule">
         <h2>시험 일정</h2>
+        <?php
+            require "sql_connect.php";
+
+            $sql_str = ("select * from test where date(now()) <= date(test_date) order by test_date");
+            $return = sql_con($sql_str);
+            while ($result = mysqli_fetch_array($return))
+            {
+                ?>
+                <a href="">번호 : <?php echo $result['test_no']; ?>  <?php echo $result['test_name']; ?>  <?php echo $result['test_date']; ?> <?php echo $result['test_place']; ?></a>   
+                <?php    
+            }     
+            ?>
         <!-- 매칭 결과를 표시하는 내용을 추가하세요 -->
     </section>
 
