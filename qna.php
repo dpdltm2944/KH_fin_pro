@@ -80,19 +80,12 @@
         }
 
         function deleteQuestion(button) {
-            if($user_id != "admin"){
-                alert("관리자만 삭제할 수 있습니다.");
-                return;
-            }
+            
             const listItem = button.parentElement;
             listItem.remove();
         }
 
         function replyToQuestion(button) {
-            if($user_id != "admin"){
-            alert("관리자만 답변할 수 있습니다.");
-            return;
-            }
             const listItem = button.parentElement;
         }
     </script>
