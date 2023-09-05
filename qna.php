@@ -8,7 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>게시판</h1>
+        <nav>
+            <ul>
+                <li><a href="/">메인</a></li>
+                <li><a href="/evaluation.html">합격자 발표</a></li>
+                <li><a href="/notice.php">공지사항</a></li>
+                <li><a href="/qna.html">문의하기</a></li>
+                <li><a href="/profile.html">마이페이지</a></li>
+                <li><a href="/login.html">로그인</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="section">
         <h2>게시글 작성</h2>
