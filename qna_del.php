@@ -7,10 +7,16 @@
     $sql_str = "delete from qna where no=" . $_GET['no'];
     $return = sql_con($sql_str);
     if($return){
-        echo "글 등록 성공";
+        echo "<script>
+        alert('글 삭제 성공');
+        </script>";
+        echo "<script>location.href='qna.php'</script>";
     }
     else {
-        echo "글 등록 실패";
+        echo "<script>
+        alert('글 삭제 실패');
+        </script>";
+        echo "<script>location.href='qna.php'</script>";
     }    
 
 ?>
