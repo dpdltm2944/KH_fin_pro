@@ -41,8 +41,8 @@
     </header>
 
         
-            제목 : <?php echo $result['subject']."\n"; ?> 
-            내용 : <?php echo $result['content']."\n"; ?> 
+            제목 : <?php echo $result['subject']."\n"; ?> <br>
+            내용 : <?php echo $result['content']."\n"; ?> <br>
             작성자 : <?php echo $result['user_id']."\n"; ?> 
     </body>
 </html>
