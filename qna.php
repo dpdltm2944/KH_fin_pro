@@ -1,6 +1,6 @@
 <?php
     include "sql_connect.php";
-    &sql = "select * from qna order by no desc";
+    $sql = "select * from qna order by no desc";
     $result = sql_con($sql);
 ?>
 
