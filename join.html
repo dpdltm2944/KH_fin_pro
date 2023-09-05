@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+        <script>
+            function validation()
+            {
+                var id = document.getElementById("id");
+                var id = document.getElementById("password");
+                var id = document.getElementById("name");
+                var id = document.getElementById("phone");
+                if( id.vlaue == "" ) {
+                    alert("아이디는 비우실 수 없습니다");
+                    return false;
+                }
+
+                if( password.vlaue == "" ) {
+                    alert("비밀번호는 비우실 수 없습니다");
+                    return false;
+                }
+                if( name.vlaue == "" ) {
+                    alert("이름은 비우실 수 없습니다");
+                    return false;
+                }
+
+                if( phone.vlaue == "" ) {
+                    alert("휴대폰번호는 비우실 수 없습니다");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form method="post" action="join_proc.php" onsubmit="return validation();">
+            <pre>
+            *아이디 : <input type="text" name="id" id="id" maxlength="15">(최대 15자리까지 입력가능)
+            *비밀번호 : <input type="password" name="pass" id="pass">
+            *이름 : <input type="text" name="name" id="name">
+            *휴대폰 : <input type="text" name="mobile" id="mobile">
+            주소 : <input type="text" name="address" id="address">
+            학력 : <input type="text" name="academic" id="academic">
+            * 표시 항목은 필수 입력 항목입니다.
+            <input type="submit" value="가입"> <input type="reset" value="취소">
+            </pre>
+        </form>
+    </body>
+</html>

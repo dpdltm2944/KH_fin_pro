@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원 가입 및 로그인</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">메인</a></li>
+                <li><a href="/evaluation.html">합격자 발표</a></li>
+                <li><a href="/notic.html">공지사항</a></li>
+                <li><a href="/qna.html">문의하기</a></li>
+                <li><a href="/profile.html">마이페이지</a></li>
+                <li><a href="/login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>로그인</h2>
+    <div>
+        <form method="post" action="/login_proc.php">
+            <label for="id">ID:</label>
+            <input type="id" name="id" required><br>
+
+            <label for="password">비밀번호:</label>
+            <input type="password" name="password" required><br>
+
+            <input type="submit" name="login" value="로그인">
+        </form>
+
+        <a href="join.html" class="button"><button>회원가입</button></a>
+    </div>
+</body>
+</html>
