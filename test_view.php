@@ -48,7 +48,7 @@
             $return = sql_con($sql_str);
             $result = mysqli_fetch_array($return);
         ?>
-        <h2><?php echo "$result['test_name']"; ?></h2>
+        <h2><?php echo $result['test_name']; ?></h2><br>
            <p> 번호 : <?php echo $result['test_no']; ?><br>
             <?php echo $result['test_name']; ?>  <br>
             <?php echo $result['test_date']; ?> <br>
