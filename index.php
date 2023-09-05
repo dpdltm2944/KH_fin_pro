@@ -16,9 +16,9 @@
                 <li><a href="/qna.php">문의하기</a></li>
                 <li><a href="/profile.php">마이페이지</a></li>
                 <?php if($_SESSION['loginID']== ""){
-                echo "<li><a href=\"/login.html\">로그인</a></li>"
+                echo "<li><a href=\"/login.html\">로그인</a></li>";
                 }else{
-                    echo "<li><a href=\"/logout.php\">로그아웃</a></li>"
+                    echo "<li><a href=\"/logout.php\">로그아웃</a></li>";
                 }
                 ?>
             </ul>
