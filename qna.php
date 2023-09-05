@@ -21,7 +21,7 @@
     </header>
     <div class="section">
         <h2>게시글 작성</h2>
-        <form>
+        <form method="post" action="qna_add.php">
             <label for="title">제목:</label>
             <input type="text" id="title" name="title" required>
 
