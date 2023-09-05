@@ -4,9 +4,15 @@
     $id = $_POST['id'];
     $pass = $_POST['pass'];
     $name = $_POST['name'];
-    $academic = $_POST['academc'];
     $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    $sex = $_POST['sex'];
+    $register_number = $_POST['register_number'];
     $address = $_POST['address'];
+    $academc = $_POST['academc'];
+    
+    
 
     // client 입력 값 검증
     if($id == ""){
@@ -28,8 +34,12 @@
             id='$id',
             pass='$pass',
             name='$name',
-            address='$address',
             phone='$phone',
+            email='$email',
+            age='$age',
+            sex='$sex',
+            register_number='$register_number',
+            address='$address',
             academic='$academic'
             ";
     $return = sql_con($sql);
