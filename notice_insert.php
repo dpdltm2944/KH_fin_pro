@@ -1,5 +1,5 @@
 <?php
-    require "sql_connect.php"
+    require "sql_connect.php";
     session_start();
 
     if($_SESSION['loginID'] == ""){
