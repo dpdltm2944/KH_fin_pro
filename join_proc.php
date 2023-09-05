@@ -10,7 +10,7 @@
     $sex = $_POST['sex'];
     $register_number = $_POST['register_number'];
     $address = $_POST['address'];
-    $academc = $_POST['academc'];
+    $academic = $_POST['academic'];
     
     
 
@@ -30,7 +30,7 @@
     }
 
     
-    $sql = "insert into memeber set
+    $sql = "insert into user set
             id='$id',
             pass='$pass',
             name='$name',
