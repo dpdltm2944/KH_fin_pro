@@ -30,7 +30,7 @@
     <section class="section profile">
         <h1>나의 프로필</h1>
         <div class="profile-info">
-            <img src="user-profile.jpg" alt="프로필 이미지">
+            <img src="/img/user-profile.jpg" alt="프로필 이미지">
             
             
             
