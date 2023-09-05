@@ -45,7 +45,6 @@ $no = $result['no'];
             <label for="title">제목:<?php echo $title?></label>
             <label for="user_id">작성자:<?php echo $author; ?></label>
             <label for="content">문의내용:<?php echo $content?></label>
-            <!--삭제 버튼-->
             <input type="button" value="삭제" onclick="location.href='qna_del.php?no=<?php echo $no; ?>'">
             <input type="button" value="목록" onclick="location.href='qna.php'">
         </form>
