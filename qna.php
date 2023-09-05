@@ -43,8 +43,10 @@
             <label for="content">문의내용:</label>
             <textarea id="content" name="content" rows="5" required></textarea>
 
-            <input type="submit" value="등록">
-            <input type="reset" value="취소">
+           <!--공백 줄 추가-->
+              <br>
+           <input type="submit" value="등록">
+           <input type="reset" value="취소">
         </form>
     </div>
    
