@@ -45,18 +45,12 @@
                 $sql_str = "SELECT name , age , sex , address FROM user WHERE id='$id'";
                 $return = sql_con($sql_str);
             }
-
-            while ($result = mysql_fetch_array($return)) 
-            {
+            $result = mysqli_fetch_array($return);
             ?>
             <h2>사용자 이름: <?php echo $result['name']; ?></h2>
-                    <p>나이: <?php echo $result['age']; ?> </p>
-                    <p>성별: <?php echo $result['sex']; ?></p>
-                    <p>주소: <?php echo $result['address']; ?></p>
-                <?php    
-            }  
-
-                ?>
+            <p>나이: <?php echo $result['age']; ?> </p>
+            <p>성별: <?php echo $result['sex']; ?></p>
+            <p>주소: <?php echo $result['address']; ?></p>
             
         </div>
     </section>
