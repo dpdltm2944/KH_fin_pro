@@ -37,8 +37,8 @@
            
 
             <?php
-            if ($_SESSION['id']) {
-                $id = $_SESSION['id'];
+            if ($_SESSION['loginID']) {
+                $id = $_SESSION['loginID'];
         
                 require "sql_connect.php";
         
