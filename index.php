@@ -18,7 +18,7 @@
                 <?php 
                 session_start();
                 if($_SESSION['loginID']== ""){
-                echo "<li><a href=\"/login.html\">로그인</a></li>";
+                echo "<li><a href=\"/login.php\">로그인</a></li>";
                 }else{
                     echo "<li><a href=\"/logout.php\">로그아웃</a></li>";
                 }
