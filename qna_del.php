@@ -4,10 +4,7 @@
     
 
     
-    $sql_str = "insert into qna set
-            subject='$title',
-            user_id='$author',
-            content='$content'";
+    $sql_str = "delete from qna where no=" . $_GET['no'];
     $return = sql_con($sql_str);
     if($return){
         echo "글 등록 성공";
