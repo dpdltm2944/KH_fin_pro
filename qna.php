@@ -59,8 +59,9 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<li>
-                            <span class="question-title" onclick="toggleContent(this)">' . $row['제목컬럼'] . '</span>
-                            <div class="question-content">' . $row['내용컬럼'] . '</div>
+                            <span class="question-title" onclick="toggleContent(this)">' . $row['subject'] . '</span>
+                            <div class="question-content">' . $row['content'] . '</div>
+                            <div class="question-name">' . $row['user_id'] . '</div>
                             <button class="delete-button" onclick="deleteQuestion(this)">삭제</button>
                             <button class="reply-button" onclick="replyToQuestion(this)">답변</button>
                           </li>';
