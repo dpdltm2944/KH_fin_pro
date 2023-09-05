@@ -40,7 +40,7 @@
             <label for="title">제목:</label>
             <input type="text" id="title" name="title" required>
                 <!--작성자는 session에서 가져오기-->
-            <label for="user_id">작성자:</label> <input type="text" value="<?php echo $user_id; ?>">
+            <label for="user_id">작성자:</label> <lable type="text" value="<?php echo $user_id; ?>">
             
             <label for="content">문의내용:</label>
             <textarea id="content" name="content" rows="5" required></textarea>
