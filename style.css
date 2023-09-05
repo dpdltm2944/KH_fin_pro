@@ -78,6 +78,7 @@ textarea
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    resize: none;
 }
 input[type="text"],
 input[type="email"],
