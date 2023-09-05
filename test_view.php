@@ -50,11 +50,11 @@
         ?>
         <h2><?php echo $result['test_name']; ?></h2><br>
            <p> 번호 : <?php echo $result['test_no']; ?><br>
-            <?php echo $result['test_name']; ?>  <br>
-            <?php echo $result['test_date']; ?> <br>
-            <?php echo $result['test_place']; ?> 
-            <?php echo $result['test_time']+"분"; ?> 
-            <?php echo $result['test_price']+"원"; ?> 
+            자격증명 <?php echo $result['test_name']; ?>  <br>
+            응시일자 <?php echo $result['test_date']; ?> <br>
+            응시장소 <?php echo $result['test_place']; ?> <br>
+            응시시간 <?php echo $result['test_time']; ?> 분 <br>
+            응시가격 <?php echo $result['test_price']; ?> 원 <br>
             </p> 
             
         <!-- 매칭 결과를 표시하는 내용을 추가하세요 -->
