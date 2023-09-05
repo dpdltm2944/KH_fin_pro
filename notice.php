@@ -51,7 +51,8 @@
             require "sql_connect.php";
 
             $sql_str = ("select * from notice");
-            while ($result = mysqli_fetch_array(sql_con($sql_str))) 
+            $return = sql_con($sql_str);
+            while ($result = mysqli_fetch_array($return))
             {
                 ?>
                 <a href="notice_view.php?no=<?php echo $result['no'];?> ">번호 : <?php echo $result['no']; ?> 제목 : <?php echo $result['title']; ?> 작성자 : <?php echo $result['user_id']; ?> </a>   
