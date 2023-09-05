@@ -43,8 +43,8 @@
             {
                 echo $result['test_name'];
                 echo $result['test_date'];
-                echo $result['test_time'] +"분";
-                echo $result['test_price'] +"원";
+                echo $result['test_time']; echo "분";
+                echo $result['test_price']; echo "원";
                 echo $result['test_place'];
                 echo "<br>";
             }
