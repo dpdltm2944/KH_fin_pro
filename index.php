@@ -48,7 +48,7 @@
             while ($result = mysqli_fetch_array($return))
             {
                 ?>
-                <a href="/test_view.php?test_no=<?php echo $result['test_no'];?>번호 : <?php echo $result['test_no']; ?>  <?php echo $result['test_name']; ?>  <?php echo $result['test_date']; ?> <?php echo $result['test_place']; ?></a> <br>
+                <a href="/test_view.php?test_no=<?php echo $result['test_no'];?>">번호 : <?php echo $result['test_no']; ?>  <?php echo $result['test_name']; ?>  <?php echo $result['test_date']; ?> <?php echo $result['test_place']; ?></a> <br>
                 <?php    
             }     
             ?>
