@@ -23,7 +23,7 @@
     <?php
           session_start();
           if($_SESSION['loginID'] != ""){
-            // 로그인 시 프로필
+            // 로그인 시 프로필 // asdfasldfkajsldfkjasldfkjasldk
             echo "<section class=\"section profile\">";
             echo "<h1>나의 프로필</h1>";
             echo "</section>";
