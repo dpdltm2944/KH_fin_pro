@@ -25,7 +25,7 @@ $upload_file = $upload_dir . "profile_" . $user_id . ".jpg";
 //파일 업로드
 
 if ($error == 0) {
-    if (move_uploaded_file($upload_file)) {
+    if (move_uploaded_file($tmp_name, $upload_file)) {
         echo "파일 업로드 성공";
         //db에 파일 저장 경로/파일명 저장
         $sql_str = "update user set img_path='$upload_file' where id='$user_id'";
