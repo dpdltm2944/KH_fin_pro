@@ -18,8 +18,8 @@ $error = $img['error'];
 
 $upload_dir = "./img/";
 $upload_file = $upload_dir . basename($filename);
-// 파일 이름 proifle_[user_id].jpg 로 변경
-$upload_file = $upload_dir . "profile_" . $user_id . ".jpg";
+// 파일 이름 proifle_[user_id].확장자 로 변경;
+$upload_file = $upload_dir . "profile_" . $user_id . "." . pathinfo($filename, PATHINFO_EXTENSION);
 
 
 //파일 업로드
