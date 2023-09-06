@@ -15,7 +15,7 @@
     $return = sql_con($sql_str);
     
    
-    $sql_str2 = "insert into test_result set test_no='$no', user_name='$return1', order_id='$order_id'";
+    //$sql_str2 = "insert into test_result set test_no='$no', user_name='$return1', order_id='$order_id'";
     //쿼리 결과
    
     $return2 = sql_con($sql_str2);
