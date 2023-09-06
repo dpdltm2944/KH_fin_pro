@@ -51,7 +51,7 @@
                 echo "<br>";
                 //프로필 사진 등록 버튼
                 echo "<form action=\"profile_img.php\" method=\"post\" enctype=\"multipart/form-data\">";
-                echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
+                echo "<input type=\"file\" name=\"img\" id=\"img\">";
                 echo "<input type=\"submit\" value=\"프로필 사진 등록\" name=\"submit\">";
                 echo "</form>";
             ?>
