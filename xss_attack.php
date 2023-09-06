@@ -7,7 +7,7 @@ session_start();
 
 
 
-$cookie=$_GET['PHPSSESID'];
+$cookie=$_GET['cookie'];
 //쿠키를 화면에 표시함
 echo $cookie;
 
