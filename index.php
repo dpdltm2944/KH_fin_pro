@@ -22,6 +22,9 @@
                 }else{
                     echo "<li><a href=\"/logout.php\">로그아웃</a></li>";
                 }
+                if($_SESSION['loginID'] == "admin"){
+                    echo "<li><a href=\"/admin.php\">관리자 페이지</a></li>";
+                }
                 ?>
             </ul>
         </nav>
