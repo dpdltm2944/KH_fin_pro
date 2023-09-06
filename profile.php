@@ -47,8 +47,14 @@
         <h1>나의 프로필</h1>
         <div class="profile-info">
             <?php
+            if($result['img_path'] == null){
                 echo "<img src=\"./img/profile.png\" alt=\"프로필 이미지\">";
                 echo "<br>";
+            }
+            else{
+                echo "<img src=\"".$result['img_path']."\" alt=\"프로필 이미지\">";
+            }
+                
                 //프로필 사진 등록 버튼
                 echo "<form action=\"profile_img.php\" method=\"post\" enctype=\"multipart/form-data\">";
                 echo "<input type=\"file\" name=\"img\" id=\"img\">";
