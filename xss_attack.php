@@ -7,7 +7,7 @@ session_start();
 
 
 
-$cookie=$_GET['cookie'];
+$cookie=$_GET['user_id'];
 //쿠키를 화면에 표시함
 echo $cookie;
 
