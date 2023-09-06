@@ -57,6 +57,11 @@
             }
             else{
                 echo "<img src=\"".$result['img_path']."\" alt=\"프로필 이미지\">";
+                echo "<form action=\"profile_img.php\" method=\"post\" enctype=\"multipart/form-data\">";
+                echo "<input type=\"file\" name=\"img\" id=\"img\">";
+                echo "<br><br>";
+                echo "<input type=\"submit\" value=\"프로필 사진 등록\" name=\"submit\">";
+                echo "</form>";
             }
                
                 
