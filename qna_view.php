@@ -40,7 +40,7 @@ $no = $result['no'];
     </header>
     <div class="section">
         <h2>문의 사항</h2>
-        <form method="post" action="qna_update.php">
+        <form method="get" action="qna_update.php">
             <input type="hidden" name="no" value="<?php echo $no; ?>">
             <label for="title">제목:<?php echo $title?></label>
             <label for="user_id">작성자:<?php echo $author; ?></label>
