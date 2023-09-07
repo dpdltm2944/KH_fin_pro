@@ -27,8 +27,8 @@
     $return = sql_con($sql);
 
     if($return){
-        echo "<script>alert('정보수정 완료'); location.href='/';</script>";
+        echo "<script>alert('정보수정 완료'); location.href='/profile.php';</script>";
     }else{
-        echo "<script>alert('정보수정 실패'); location.href='/';</script>";
+        echo "<script>alert('정보수정 실패'); location.href='/profile.php';</script>";
     }
 ?>
