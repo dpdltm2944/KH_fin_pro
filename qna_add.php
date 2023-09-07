@@ -1,9 +1,9 @@
 <?php
 require "sql_connect.php";
 session_start();
-$title = $_GET['title'];
+$title = $_POST['title'];
 $author = $_SESSION['loginID'];
-$content = $_GET['content'];
+$content = $_POST['content'];
 
 if (empty($author)) {
     //경고창 띄우기
