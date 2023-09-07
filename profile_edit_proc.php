@@ -27,10 +27,8 @@
     $return = sql_con($sql);
 
     if($return){
-        echo "정보수정 성공";
+        echo "<script>alert('정보수정 완료'); location.href='/';</script>";
     }else{
-        echo "정보수정 실패";
+        echo "<script>alert('정보수정 실패'); location.href='/';</script>";
     }
-    mysql_close();
 ?>
-<a href="/">메인페이지</a>
