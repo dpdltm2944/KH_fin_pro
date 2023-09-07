@@ -37,7 +37,7 @@
 
             require "sql_connect.php";
 
-            $sql_str = "SELECT name , age , sex , address, img_path FROM user WHERE id='$id'";
+            $sql_str = "SELECT name , age , sex , address, phone, img_path,password FROM user WHERE id='$id'";
             $return = sql_con($sql_str);
         } else {
             echo "<script>alert('로그인 후 이용하세요.');history.back();</script>";
@@ -85,7 +85,13 @@
             <p>주소:
                 <?php echo $result['address']; ?>
             </p>
-
+            <p>전화번호:
+                <?php echo $result['phone']; ?>
+            </p>
+            <form action="profile_edit.php" method="post">";
+                <input type="button" name="button" id="button">
+                <input type="submit" value="프로필 사진 등록" name="submit">";
+            </form>
         </div>
     </section>
 
