@@ -14,13 +14,13 @@
     if($pass == ""){
     $sql = "update user set
             phone='$phone', 
-            address='$address
+            address='$address'
             WHERE id = '$_SESSION[loginID]'";
     }else{
         $sql = "update user set
             password = '$pass',
             phone='$phone',
-            address='$address
+            address='$address'
             WHERE id = '$_SESSION[loginID]'";
     }
 
