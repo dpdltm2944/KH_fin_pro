@@ -22,6 +22,9 @@
     <body>
             결과 : 
             <?php
+            echo $result['test_point'];
+            echo $result['test_point_min'];
+            
             if ($result['test_point'] >= $result['test_point_min']){
                 echo "축하합니다. 합격입니다.";
             }else{
