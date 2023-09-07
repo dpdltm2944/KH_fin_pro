@@ -26,7 +26,7 @@
                 echo "축하합니다. 합격입니다.";
             }else{
                 echo "불합격입니다.";
-            }endif;
+            }
             ?> 
     </body>
 </html>
