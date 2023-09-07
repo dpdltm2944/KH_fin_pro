@@ -49,7 +49,8 @@
                 echo $result['test_date']; echo " ";
                 echo $result['test_time']; echo "분 ";
                 echo $result['test_price']; echo "원 ";
-                echo $result['test_place'];
+                echo $result['test_place']; echo " ";
+                echo "수험번호: ";echo $result['order_id'];
                 echo "</section>";
                 echo "<br>";
             }

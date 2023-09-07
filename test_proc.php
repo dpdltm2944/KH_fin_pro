@@ -11,7 +11,7 @@
     $sql_str1 = "select user_name from user where user_no='$user_no'";
     $return1 = sql_con($sql_str1);
     //DB쿼리
-    $sql_str = "insert into test_order set test_no='$no', user_no='$user_no', order_id='$order_id'";
+    $sql_str = "insert into test_order set test_no='$no', user_no='$user_no', order_id='$order_id', user_name='$user_name'";
     $return = sql_con($sql_str);
     
    

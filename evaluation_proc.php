@@ -1,9 +1,9 @@
 <?php
 
-    $test_no = $_GET['test_no'];
+    $order_id = $_GET['order_id'];
     $user_name = $_GET['user_name'];
-    require "sql_connect.php"
-    $sql_str = "select * from test_result where user_no=$user_no && user_name=$user_name ";
+    require "sql_connect.php";
+    $sql_str = "select test.test_point_min, test_order.test_point from test join test_order on test.test_no = test_order.test_no where test_order.order_id = '$order_id' and test_order.user_name = '$user_name'";
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
 ?>
@@ -20,6 +20,13 @@
     </head>
 
     <body>
-            결과 : <?php echo $result['result']."\n"; ?> 
+            결과 : 
+            <?php
+            if ($result['test_point'] >= $result['test_point_min']){
+                echo "축하합니다. 합격입니다.";
+            }else{
+                echo "불합격입니다.";
+            }endif;
+            ?> 
     </body>
 </html>
