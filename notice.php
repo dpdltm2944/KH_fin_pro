@@ -56,7 +56,8 @@
             {
                 ?>
                 <a href="notice_view.php?no=<?php echo $result['no'];?> ">번호 : <?php echo $result['no']; ?> 제목 : <?php echo $result['subject']; ?> 작성자 : <?php echo $result['user_id']; ?> </a>   
-                <?php    
+                <br>
+                <?php        
             }     
             ?>
 </body>
