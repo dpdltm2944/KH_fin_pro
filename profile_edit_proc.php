@@ -21,7 +21,7 @@
             WHERE id = '$_SESSION[loginID]'";
     }else{
         $sql = "update user set
-            pass = '$pass',
+            password = '$pass',
             name='$name', 
             phone='$phone',
             mobile='$mobile', 
