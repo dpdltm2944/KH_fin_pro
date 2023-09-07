@@ -15,17 +15,15 @@
     if($pass == ""){
     $sql = "update user set
             name='$name', 
-            phone='$phone',
-            mobile='$mobile', 
-            address='$address'
+            phone='$phone', 
+            address='$address
             WHERE id = '$_SESSION[loginID]'";
     }else{
         $sql = "update user set
             password = '$pass',
             name='$name', 
             phone='$phone',
-            mobile='$mobile', 
-            address='$address'
+            address='$address
             WHERE id = '$_SESSION[loginID]'";
     }
 
