@@ -6,7 +6,6 @@
     require "sql_connect.php";
 
     $pass=$_POST['pass'];
-    $name=$_POST['name'];
     $phone=$_POST['phone'];
     $address=$_POST['address'];
 
@@ -14,14 +13,12 @@
     //DB쿼리
     if($pass == ""){
     $sql = "update user set
-            name='$name', 
             phone='$phone', 
             address='$address
             WHERE id = '$_SESSION[loginID]'";
     }else{
         $sql = "update user set
             password = '$pass',
-            name='$name', 
             phone='$phone',
             address='$address
             WHERE id = '$_SESSION[loginID]'";
