@@ -88,9 +88,8 @@
             <p>전화번호:
                 <?php echo $result['phone']; ?>
             </p>
-            <form action="profile_edit.php" method="post">";
-                <input type="button" name="button" id="button">
-                <input type="submit" value="프로필 사진 등록" name="submit">";
+            <form action="profile_edit.php" method="post">
+                <input type="submit" value="정보 수정하기" name="submit">
             </form>
         </div>
     </section>
