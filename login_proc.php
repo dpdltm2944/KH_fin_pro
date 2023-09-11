@@ -11,7 +11,6 @@
     //쿼리 결과
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
-
     if($result){
         echo "로그인 성공(success)";
         session_start();
@@ -21,12 +20,6 @@
         $_SESSION['user_name'] = $result['name'];
     }else{
         echo "로그인 실패(fail)";
-        //result 출력
-        echo "<br>";
-        echo $result['id'];
-        echo "<br>";
-        echo $result['password'];
-        echo "<br>";
     }
 
 ?>

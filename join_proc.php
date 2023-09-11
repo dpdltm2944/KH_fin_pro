@@ -3,7 +3,7 @@
 
     $id = $_POST['id'];
     $pass = $_POST['pass'];
-    $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
+    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
