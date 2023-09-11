@@ -14,11 +14,11 @@
 
     if($result){
         echo "로그인 성공(success)";
-       // session_start();
-       // $_SESSION['loginID'] = $id;
-       // $_SESSION['type'] = $result['type'];
-       // $_SESSION['user_no'] = $result['no'];
-      //  $_SESSION['user_name'] = $result['name'];
+        session_start();
+        $_SESSION['loginID'] = $id;
+        $_SESSION['type'] = $result['type'];
+        $_SESSION['user_no'] = $result['no'];
+        $_SESSION['user_name'] = $result['name'];
     }else{
         echo "로그인 실패(fail)";
     }
