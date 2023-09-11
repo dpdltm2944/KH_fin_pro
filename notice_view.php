@@ -1,13 +1,9 @@
 <?php
-
     $no = $_GET['no'];
-   
     require "sql_connect.php";
     $sql_str = "select * from notice where no=$no";
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +14,6 @@
         <link rel="stylesheet" href="style.css">
         <title><?php echo $result['subject']; ?> </title>
     </head>
-
     <body>
     <header>
         <nav>
@@ -39,8 +34,6 @@
             </ul>
         </nav>
     </header>
-
-        
             제목 : <?php echo $result['subject']."\n"; ?> <br>
             내용 : <?php echo $result['content']."\n"; ?> <br>
             작성자 : <?php echo $result['user_id']."\n"; ?> 

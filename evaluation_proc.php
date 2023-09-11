@@ -3,7 +3,9 @@
     $order_id = $_POST['order_id'];
     $user_name = $_POST['user_name'];
     require "sql_connect.php";
-    $sql_str = "select test.test_point_min, test_order.test_point from test join test_order on test.test_no = test_order.test_no where test_order.order_id = '$order_id' and test_order.user_name = '$user_name'";
+    $sql_str = "select test.test_point_min, test_order.test_point 
+                        from test join test_order on test.test_no = test_order.test_no
+                        where test_order.order_id = '$order_id' and test_order.user_name = '$user_name'";
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
     echo $result;

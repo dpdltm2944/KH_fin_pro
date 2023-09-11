@@ -4,7 +4,6 @@
     $result = sql_con($sql_str);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -48,9 +47,7 @@
            <input type="submit" value="등록">
            <input type="reset" value="취소">
         </form>
-    </div>
-   
-    
+    </div>    
 </body>
 <body>
     <div class="section">

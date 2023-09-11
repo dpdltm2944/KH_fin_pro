@@ -3,6 +3,7 @@
 
     $id = $_POST['id'];
     $pass = $_POST['pass'];
+    $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
@@ -12,8 +13,6 @@
     $address = $_POST['address'];
     $academic = $_POST['academic'];
     
-    
-
     // client 입력 값 검증
     if($id == ""){
         echo "아이디는 비우실 수 없습니다.";
@@ -29,10 +28,9 @@
         exit;
     }
 
-    
     $sql_str = "insert into user set
             id='$id',
-            password='$pass',
+            password='$hashed_pass',
             name='$name',
             phone='$phone',
             email='$email',

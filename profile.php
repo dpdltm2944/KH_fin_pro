@@ -29,7 +29,6 @@
         </nav>
     </header>
 
-
     <section class="section profile">
         <?php
         if ($_SESSION['loginID']) {
@@ -62,16 +61,8 @@
                 echo "<br><br>";
                 echo "<input type=\"submit\" value=\"프로필 사진 등록\" name=\"submit\">";
                 echo "</form>";
-            }
-               
-                
+            }  
             ?>
-
-
-
-
-
-
 
             <h2>사용자 이름:
                 <?php echo $result['name']; ?>

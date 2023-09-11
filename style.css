@@ -62,7 +62,7 @@ form {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    max-width: 4000px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -71,16 +71,7 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
-textarea
-{
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
 
-    resize: none;
-}
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -101,17 +92,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-input[type="reset"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-input[type="reset"]:hover {
     background-color: #0056b3;
 }

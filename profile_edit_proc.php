@@ -1,8 +1,4 @@
 <?php
-// if($_SERVER['HTTP_REFERER'] != 'http://www.terry.com/member.php'){
-//     echo "요청하신 경로가 올바르지 않습니다.";
-//     exit;
-// }
     require "sql_connect.php";
 
     $pass=$_POST['pass'];
