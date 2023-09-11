@@ -31,10 +31,10 @@
     </header>
 
     <?php
-          
+           require "sql_connect.php";
           if($_SESSION['loginID'] != ""){
             // 로그인 시 나의 접수현황 //
-            require "sql_connect.php";
+           
             $user_no = $_SESSION['user_no'];
             /// join 하여 데이터 출력 해야됨///
             $sql_str = ("select * from test_order join test on test_order.test_no = test.test_no where test_order.user_no = $user_no");
@@ -62,8 +62,8 @@
     <section class="section schedule">
         <h2>시험 일정</h2>
         <?php
-            $sql_str = ("select * from test");
-            //where date(now()) <= date(test_date) order by test_date
+            $sql_str = ("select * from test where date(now()) <= date(test_date) order by test_date");
+        
             $return = sql_con($sql_str);
             while ($result = mysqli_fetch_array($return))
             {
