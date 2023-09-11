@@ -3,10 +3,11 @@
     //파라미터 저장
     $id=$_POST['id'];
     $pass=$_POST['password'];
-    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+   // $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
     
     //DB쿼리
-    $sql_str = "select * from user where id = '$id' and password = '$hashed_pass';";
+   // $sql_str = "select * from user where id = '$id' and password = '$hashed_pass';";
+      $sql_str = "select * from user where id = '$id' and password = '$pass';";
 
     //쿼리 결과
     $return = sql_con($sql_str);
