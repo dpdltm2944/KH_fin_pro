@@ -21,6 +21,12 @@
         $_SESSION['user_name'] = $result['name'];
     }else{
         echo "로그인 실패(fail)";
+        //result 출력
+        echo "<br>";
+        echo $result['id'];
+        echo "<br>";
+        echo $result['password'];
+        echo "<br>";
     }
 
 ?>
