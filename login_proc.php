@@ -1,21 +1,20 @@
 <?php
     require "sql_connect.php";
+    require "passwd.php";
     //파라미터 저장
     $id=$_POST['id'];
     $pass=$_POST['password'];
-   // $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+    
     
     //DB쿼리
     $sql_str = "call login_user('$id')";
-   //   $sql_str = "select * from user where id = '$id' and password = '$pass';";
 
     //쿼리 결과
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
-    echo $result['password'];
-    <br>
-    echo password_verify($pass, $result['password']);
-    if($result && password_verify($pass, $result['password'])){
+    $hashed_pass = pass_crypt($result['password']. 'd');
+    
+    if($result && $pass == $hashed_pass){
         echo "로그인 성공(success)";
         session_start();
         $_SESSION['loginID'] = $id;

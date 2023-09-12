@@ -2,7 +2,7 @@
     require "sql_connect.php";
 
     $pass=$_POST['pass'];
-    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+    $hashed_pass = pw_crypt($pass, 'e');
 
     $phone=$_POST['phone'];
     $address=$_POST['address'];

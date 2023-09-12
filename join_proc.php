@@ -1,9 +1,10 @@
 <?php
 require "sql_connect.php";
+require "passwd.php";
 
 $id = $_POST['id'];
 $pass = $_POST['pass'];
-$hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+$hashed_pass = pw_crypt($pass, 'e');
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
@@ -27,11 +28,11 @@ if ($id == "") {
     echo "휴대폰 번호는 비우실 수 없습니다.";
     exit;
 }
-/*$sql_str = "call join_user('$id','$hashed_pass','$name',
+$sql_str = "call join_user('$id','$hashed_pass','$name',
             '$phone','$email','$age','$sex','$register_number',
-            '$address','$academic');";*/
+            '$address','$academic');";
 
- $sql_str = "insert into user set
+/*$sql_str = "insert into user set
          id='$id',
          password='$hashed_pass',
          name='$name',
