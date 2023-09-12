@@ -12,7 +12,7 @@
     //쿼리 결과
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
-    $hashed_pass = pass_crypt($result['password']. 'd');
+    $hashed_pass = pass_crypt($result['password'], 'd');    
     
     if($result && $pass == $hashed_pass){
         echo "로그인 성공(success)";
