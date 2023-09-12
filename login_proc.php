@@ -13,6 +13,7 @@
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
     echo $result['password'];
+    echo password_verify($pass, $result['password']);
     if($result && password_verify($pass, $result['password'])){
         echo "로그인 성공(success)";
         session_start();
