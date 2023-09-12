@@ -27,11 +27,11 @@ if ($id == "") {
     echo "휴대폰 번호는 비우실 수 없습니다.";
     exit;
 }
-$sql_str = "call join_user('$id','$hashed_pass','$name',
+/*$sql_str = "call join_user('$id','$hashed_pass','$name',
             '$phone','$email','$age','$sex','$register_number',
-            '$address','$academic');";
+            '$address','$academic');";*/
 
- /*$sql_str = "insert into user set
+ $sql_str = "insert into user set
          id='$id',
          password='$hashed_pass',
          name='$name',
@@ -42,7 +42,7 @@ $sql_str = "call join_user('$id','$hashed_pass','$name',
          register_number='$register_number',
          address='$address',
          academic='$academic'
-         ";*/
+         ";
 /*$sql_str = "insert into user set
             id='$id',
             password='$pass',
