@@ -49,8 +49,7 @@
         <!-- 게시물 목록 -->
         <?php
             require "sql_connect.php";
-
-            $sql_str = ("select * from notice");
+            $sql_str = "call notice_list();";
             $return = sql_con($sql_str);
             while ($result = mysqli_fetch_array($return))
             {

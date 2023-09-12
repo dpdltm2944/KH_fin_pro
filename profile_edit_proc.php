@@ -2,25 +2,21 @@
     require "sql_connect.php";
 
     $pass=$_POST['pass'];
+    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+
     $phone=$_POST['phone'];
     $address=$_POST['address'];
+    $user_id=$_SESSION['loginID'];
 
     session_start();
     //DB쿼리
     if($pass == ""){
-    $sql = "update user set
-            phone='$phone', 
-            address='$address'
-            WHERE id = '$_SESSION[loginID]'";
+        $sql_str = "call edit_profile('$phone', '$address'. '$user_id');";
     }else{
-        $sql = "update user set
-            password = '$pass',
-            phone='$phone',
-            address='$address'
-            WHERE id = '$_SESSION[loginID]'";
+        $sql_str = "call edit_profile_pass('$phone', '$address'. '$user_id', '$hashed_pass');";
     }
 
-    $return = sql_con($sql);
+    $return = sql_con($sql_str);
 
     if($return){
         echo "<script>alert('정보수정 완료'); location.href='/profile.php';</script>";

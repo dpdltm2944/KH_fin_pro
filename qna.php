@@ -1,6 +1,6 @@
 <?php
     require "sql_connect.php";
-    $sql_str = "select * from qna order by no desc";
+    $sql_str = "call list_qna();";
     $result = sql_con($sql_str);
 ?>
 

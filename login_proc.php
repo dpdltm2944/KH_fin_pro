@@ -6,7 +6,7 @@
    // $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
     
     //DB쿼리
-   $sql_str = "select * from user where id = '$id';";
+    $sql_str = "call login_user('$id')";
    //   $sql_str = "select * from user where id = '$id' and password = '$pass';";
 
     //쿼리 결과

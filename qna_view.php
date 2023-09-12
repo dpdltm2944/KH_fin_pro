@@ -1,7 +1,8 @@
 <?php
 require "sql_connect.php";
 session_start();
-$sql_str = "select * from qna where no=" . $_GET['no'];
+$qna_no = $_GET['no'];
+$sql_str = "call sel_qna($qna_no);";
 $return = sql_con($sql_str);
 $result = mysqli_fetch_array($return);
 $title = $result['subject'];

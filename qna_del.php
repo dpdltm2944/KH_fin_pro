@@ -7,6 +7,7 @@
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
     $author = $result['user_id'];
+    $qna_no = $_GET['no'];
     //로그인한 사용자와 글 작성자가 같은지 확인
     if($user_id != $author){
         echo "<script>
@@ -14,7 +15,7 @@
         </script>";
         echo "<script>location.href='qna.php'</script>";
     }else{
-        $sql_str = "delete from qna where no=" . $_GET['no'];
+        $sql_Str = "call del_qna($qna_no);";
         $return = sql_con($sql_str);
         if($return){
             echo "<script>

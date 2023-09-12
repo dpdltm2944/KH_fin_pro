@@ -36,7 +36,7 @@
 
             require "sql_connect.php";
 
-            $sql_str = "SELECT name , age , sex , address, phone, img_path,password FROM user WHERE id='$id'";
+            $sql_str = "call my_profile('$id');";
             $return = sql_con($sql_str);
         } else {
             echo "<script>alert('로그인 후 이용하세요.');history.back();</script>";

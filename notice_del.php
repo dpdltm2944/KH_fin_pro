@@ -2,8 +2,7 @@
     $no = $_GET['no'];
 
     require "sql_connect.php";
-
-    $sql_str = "select user_id from notice where no=$no";
+    $sql_str = "call notice_del($no);";
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
 

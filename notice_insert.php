@@ -9,8 +9,8 @@
     }
     $subject = $_POST['subject'];
     $content = $_POST['content'];
-  
-    $sql_str = "insert into notice set subject='$subject', content='$content', user_id='$user'";
+    
+    $sql_str = "call notice_insert('$subject', '$content', '$user');";
     $return = sql_con($sql_str);
     
     if($return){

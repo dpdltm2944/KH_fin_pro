@@ -1,7 +1,7 @@
 <?php
     $keyword = $_GET['keyword'];
     require "sql_connect.php";
-    $sql_str = "select * from notice where subject like '%$keyword%'";
+    $sql_str = "call notice_search('$keyword')";
     $return = sql_con($sql_str);
 ?>
 

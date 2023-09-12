@@ -1,7 +1,7 @@
 <?php
     function sql_con($sql_str){
     //$connect = mysqli_connect("96.96.96.12","root","P@ssw0rd","testla");    
-    $conn = new mysqli("192.168.140.65", "root","P@ssw0rd","testla") or die("Connect failed: %s\n". $conn -> error);
+    $conn = new mysqli("192.168.140.65", "testladmin","P@ssw0rd","testla") or die("Connect failed: %s\n". $conn -> error);
     
     if(!$conn){
         echo "mysql connect fail";

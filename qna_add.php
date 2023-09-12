@@ -26,7 +26,7 @@ if (empty($author)) {
     echo "<script> history.back();</script>";
     exit;
 } else {
-    $sql_str = "insert into qna set subject='$title', user_id='$author', content='$content'";
+    $sql_str = "call add_qna('$title','$author','$content')";
     $return = sql_con($sql_str);
     if ($return) {
         echo "글 등록 성공";

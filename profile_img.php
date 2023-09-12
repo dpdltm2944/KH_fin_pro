@@ -28,7 +28,7 @@ if ($error == 0) {
     if (move_uploaded_file($tmp_name, $upload_file)) {
         echo "파일 업로드 성공";
         //db에 파일 저장 경로/파일명 저장
-        $sql_str = "update user set img_path='$upload_file' where id='$user_id'";
+        $sql_str = "call img_profile('$user_id','$upload_file')";
         $return = sql_con($sql_str);
         if ($return) {
             echo "db에 파일 저장 성공";
