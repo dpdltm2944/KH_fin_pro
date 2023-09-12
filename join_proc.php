@@ -3,7 +3,7 @@ require "sql_connect.php";
 
 $id = $_POST['id'];
 $pass = $_POST['pass'];
-//  $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+$hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
@@ -28,7 +28,7 @@ if ($id == "") {
     exit;
 }
 
-/* $sql_str = "insert into user set
+ $sql_str = "insert into user set
          id='$id',
          password='$hashed_pass',
          name='$name',
@@ -39,8 +39,8 @@ if ($id == "") {
          register_number='$register_number',
          address='$address',
          academic='$academic'
-         ";*/
-$sql_str = "insert into user set
+         ";
+/*$sql_str = "insert into user set
             id='$id',
             password='$pass',
             name='$name',
@@ -51,7 +51,7 @@ $sql_str = "insert into user set
             register_number='$register_number',
             address='$address',
             academic='$academic'
-            ";
+            ";*/
 $return = sql_con($sql_str);
 if ($return) {
     echo "<script>";

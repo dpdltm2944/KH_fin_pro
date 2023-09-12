@@ -6,13 +6,13 @@
    // $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
     
     //DB쿼리
-   // $sql_str = "select * from user where id = '$id' and password = '$hashed_pass';";
-      $sql_str = "select * from user where id = '$id' and password = '$pass';";
+   $sql_str = "select * from user where id = '$id';";
+   //   $sql_str = "select * from user where id = '$id' and password = '$pass';";
 
     //쿼리 결과
     $return = sql_con($sql_str);
     $result = mysqli_fetch_array($return);
-    if($result){
+    if($result && password_verify($pass, $result['password'])){
         echo "로그인 성공(success)";
         session_start();
         $_SESSION['loginID'] = $id;
