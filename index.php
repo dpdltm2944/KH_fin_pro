@@ -63,7 +63,7 @@
     <section class="section schedule">
         <h2>시험 일정</h2>
         <?php
-            $sql_str = "call testlist();";
+            $sql_str = "call test_list();";
         
             $return = sql_con($sql_str);
             while ($result = mysqli_fetch_array($return))
