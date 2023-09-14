@@ -55,7 +55,7 @@
             <input type="text" name="age" id="age">
         </div>
         <div class="form-group">
-            <label for="sex">* 성별:</label>
+            <label for="sex">* 성별(Male/Female):</label>
             <input type="text" name="sex" id="sex">
         </div>
         <div class="form-group">

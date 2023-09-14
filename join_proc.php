@@ -15,47 +15,23 @@ $address = $_POST['address'];
 $academic = $_POST['academic'];
 
 // client 입력 값 검증
-if ($id == "") {
-    echo "아이디는 비우실 수 없습니다.";
+if ($id == "" || !preg_match("/[^a-zA-Z0-9]/",$id)) {
+    echo "아이디 입력값의 형식이 올바르지 않습니다.";
     exit;
-} else if ($pass == "") {
-    echo "비밀번호는 비우실 수 없습니다.";
+} else if ($pass == "" || !preg_match("/[^a-zA-Z0-9]/",$pass)) {
+    echo "비밀번호 입력값의 형식이 올바르지 않습니다.";
     exit;
-} else if ($name == "") {
-    echo "이름은 비우실 수 없습니다.";
+} else if ($name == "" || !preg_match("/^[a-zA-Z가-힣]+$/", $name)) {
+    echo "이름 입력값의 형식이 올바르지 않습니다.";
     exit;
-} else if ($phone == "") {
-    echo "휴대폰 번호는 비우실 수 없습니다.";
+} else if ($phone == "" || !preg_match("/^(010|011|016|017|018|019)-[^0][0-9]{3,4}-[0-9]{4}/",$phone)) {
+    echo "휴대폰 입력값의 형식이 올바르지 않습니다.";
     exit;
 }
 $sql_str = "call join_user('$id','$hashed_pass','$name',
             '$phone','$email','$age','$sex','$register_number',
             '$address','$academic');";
 
-/*$sql_str = "insert into user set
-         id='$id',
-         password='$hashed_pass',
-         name='$name',
-         phone='$phone',
-         email='$email',
-         age='$age',
-         sex='$sex',
-         register_number='$register_number',
-         address='$address',
-         academic='$academic'
-         ";
-/*$sql_str = "insert into user set
-            id='$id',
-            password='$pass',
-            name='$name',
-            phone='$phone',
-            email='$email',
-            age='$age',
-            sex='$sex',
-            register_number='$register_number',
-            address='$address',
-            academic='$academic'
-            ";*/
 $return = sql_con($sql_str);
 if ($return) {
     echo "<script>";

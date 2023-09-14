@@ -5,7 +5,12 @@
     $id=$_POST['id'];
     $pass=$_POST['password'];
     
-    
+    if(preg_match("/[^a-zA-Z0-9]/",$id)){
+        echo "<script>alert('숫자와 영문만 입력가능합니다.'); location.href='/';</script>";
+    }
+    if(preg_match("/[^a-zA-Z0-9]/",$pass)){
+        echo "<script>alert('숫자와 영문만 입력가능합니다.'); location.href='/';</script>";
+    }
     //DB쿼리
     $sql_str = "call login_user('$id')";
 
@@ -15,16 +20,13 @@
     $hashed_pass = pw_crypt($result['password'], 'd');    
 
     if($result && $pass == $hashed_pass){
-        echo "로그인 성공(success)";
+        echo "<script>alert('로그인 성공'); location.href='/';</script>";
         session_start();
         $_SESSION['loginID'] = $id;
         $_SESSION['type'] = $result['type'];
         $_SESSION['user_no'] = $result['no'];
         $_SESSION['user_name'] = $result['name'];
     }else{
-        echo "로그인 실패(fail)";
+        echo "<script>alert('로그인 실패'); location.href='/';</script>";
     }
-
 ?>
-
-<a href="/">메인페이지</a>
