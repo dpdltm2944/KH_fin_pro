@@ -1,6 +1,10 @@
 <?php
      function web_filter($str){
-        return htmlentities($this->mysql_fix_string($str), ENT_QUOTES, "UTF-8");
+        $str = $str.replaceAll("<","&lt;");
+        $str = $str.replaceAll(">","&gt;");
+        $str = $str.replaceAll("&","&amp;");
+        $str = $str.replaceAll("\"","&quot;");
+        return $str;
     }
 
     
