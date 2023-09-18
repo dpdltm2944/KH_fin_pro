@@ -2,8 +2,9 @@
 require "sql_connect.php";
 require "filter.php";
 session_start();
-$title = web_filter($_POST['title']);
+
 $author = $_SESSION['loginID'];
+$title = web_filter($_POST['title']);
 $content = web_filter($_POST['content']);
 
 if (empty($author)) {
