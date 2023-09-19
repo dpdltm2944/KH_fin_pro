@@ -1,11 +1,10 @@
 <?php
 require "sql_connect.php";
-require "filter.php";
 session_start();
 
 $author = $_SESSION['loginID'];
-$title = web_filter($_POST['title']);
-$content = web_filter($_POST['content']);
+$title = htmlspecialchars($_POST['title']);
+$content = htmlspecialchars($_POST['content']);
 
 if (empty($author)) {
     //경고창 띄우기
