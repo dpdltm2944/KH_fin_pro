@@ -63,7 +63,7 @@
                 echo "</form>";
             }  
             ?>
-
+            <div class="section">
             <h2>사용자 이름:
                 <?php echo $result['name']; ?>
             </h2>
@@ -82,6 +82,7 @@
             <form action="profile_edit.php" method="post">
                 <input type="submit" value="정보 수정하기" name="submit">
             </form>
+            </div>
         </div>
     </section>
 

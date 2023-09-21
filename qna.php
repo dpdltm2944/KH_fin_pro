@@ -50,8 +50,9 @@
     </div>    
 </body>
 <body>
+    <h2>목록</h2>
     <div class="section">
-        <h2>목록</h2>
+        
         <ul>
             <?php
             if ($result) {
