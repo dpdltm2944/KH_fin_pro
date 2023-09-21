@@ -10,7 +10,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="/">메인</a></li>
+                <li><a href="/">메인2</a></li>
                 <li><a href="/evaluation.php">합격자 발표</a></li>
                 <li><a href="/notice.php">공지사항</a></li>
                 <li><a href="/qna.php">문의하기</a></li>
