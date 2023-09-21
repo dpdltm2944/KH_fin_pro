@@ -14,11 +14,13 @@ $register_number = $_POST['register_number'];
 $address = $_POST['address'];
 $academic = $_POST['academic'];
 
-// client 입력 값 검증
+// 회원가입 입력 값 검증
+/*
 if ($id == "" || !preg_match("/[^a-zA-Z0-9]/",$id)) {
     echo "아이디 입력값의 형식이 올바르지 않습니다.";
     exit;
-} else if ($pass == "" || !preg_match("/[^a-zA-Z0-9]/",$pass)) {
+}*/
+if ($pass == "" || !preg_match("/[^a-zA-Z0-9]/",$pass)) {
     echo "비밀번호 입력값의 형식이 올바르지 않습니다.";
     exit;
 } else if ($name == "" || !preg_match("/^[a-zA-Z가-힣]+$/", $name)) {
