@@ -63,7 +63,7 @@
                 echo "</form>";
             }  
             ?>
-            <div class="section">
+            <div class="section2">
             <h2>사용자 이름:
                 <?php echo $result['name']; ?>
             </h2>
