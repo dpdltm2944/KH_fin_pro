@@ -15,18 +15,16 @@ $address = $_POST['address'];
 $academic = $_POST['academic'];
 
 // 회원가입 입력 값 검증
-/*
-if ($id == "" || !preg_match("/[^a-zA-Z0-9]/",$id)) {
+if ($id == "" || preg_match("/[^a-zA-Z0-9]/",$id)) {
     echo "아이디 입력값의 형식이 올바르지 않습니다.";
     exit;
-}*/
-if ($pass == "" || !preg_match("/[^a-zA-Z0-9]/",$pass)) {
+} else if ($pass == "" || preg_match("/[^a-zA-Z0-9]/",$pass)) {
     echo "비밀번호 입력값의 형식이 올바르지 않습니다.";
     exit;
-} else if ($name == "" || !preg_match("/^[a-zA-Z가-힣]+$/", $name)) {
+} else if ($name == "" || preg_match("/^[a-zA-Z가-힣]+$/", $name)) {
     echo "이름 입력값의 형식이 올바르지 않습니다.";
     exit;
-} else if ($phone == "" || !preg_match("/^(010|011|016|017|018|019)-[^0][0-9]{3,4}-[0-9]{4}/",$phone)) {
+} else if ($phone == "" || preg_match("/^(010|011|016|017|018|019)-[^0][0-9]{3,4}-[0-9]{4}/",$phone)) {
     echo "휴대폰 입력값의 형식이 올바르지 않습니다.";
     exit;
 }
