@@ -38,7 +38,7 @@
             <input type="submit" name="login" value="로그인">
             
         </form>
-        <button type="button" class="button" onclick="location.href='join.php'">
+        <button type="button" class="button" onclick="location.href='join.php'">회원가입</button>
     </div>
 </body>
 </html>
