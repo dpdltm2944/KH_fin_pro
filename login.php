@@ -36,9 +36,12 @@
             <input type="password" name="password" required><br>
 
             <input type="submit" name="login" value="로그인">
+            <input type="button" value="회원가입" onclick="location.href='join.php'">
             
         </form>
+        <!--
         <button type="button" class="button" onclick="location.href='join.php'">회원가입</button>
+            -->
     </div>
 </body>
 </html>
