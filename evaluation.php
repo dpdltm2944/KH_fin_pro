@@ -29,8 +29,10 @@
     <h1>시험 결과 조회</h1>
 
     <form method="post" action="evaluation_proc.php">
-        수험번호: <input type="text" name="order_id"><br>
-        이름: <input type="text" name="user_name"><br>
+        수험번호:<br>
+        <input type="text" name="order_id"><br>
+        이름:<br>
+        <input type="text" name="user_name"><br>
         <input type="submit" value="조회">
     </form>
 </body>

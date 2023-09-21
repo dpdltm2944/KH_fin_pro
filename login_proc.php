@@ -5,6 +5,7 @@
     $id=$_POST['id'];
     $pass=$_POST['password'];
     
+    //로그인 ID/PW 검증
     if(preg_match("/[^a-zA-Z0-9]/",$id)){
         echo "<script>alert('숫자와 영문만 입력가능합니다.'); location.href='/';</script>";
     }

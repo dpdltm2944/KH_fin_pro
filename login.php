@@ -36,9 +36,8 @@
             <input type="password" name="password" required><br>
 
             <input type="submit" name="login" value="로그인">
+            <a href="join.php" class="button"><button>회원가입</button></a>
         </form>
-
-        <a href="join.php" class="button"><button>회원가입</button></a>
     </div>
 </body>
 </html>

@@ -81,7 +81,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Site Name</p>
+        <p>&copy; 2023 testla</p>
     </footer>
 </body>
 </html>
