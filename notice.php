@@ -47,7 +47,7 @@
         </form>
 
         <!-- 게시물 목록 -->
-        <div class="section">
+        <div class="section2">
         <?php
             require "sql_connect.php";
             $sql_str = "call notice_list();";
